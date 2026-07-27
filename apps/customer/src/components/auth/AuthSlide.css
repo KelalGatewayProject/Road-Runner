@@ -1,0 +1,123 @@
+.auth-slide-backdrop {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(11, 26, 46, 0.55);
+  z-index: 11000;
+  animation: authFadeIn 0.3s ease forwards;
+  overscroll-behavior: none;
+  touch-action: none;
+}
+
+.auth-slide-panel {
+  position: fixed;
+  top: 50%;
+  right: 0;
+  width: min(320px, 92vw);
+  max-height: 90vh;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  transform: translateY(-50%) translateX(100%);
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-right: none;
+  box-shadow: -8px 0 28px rgba(15, 23, 42, 0.18);
+  z-index: 11001;
+  animation: authSlideInRight 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+  display: flex;
+  flex-direction: column;
+  padding: 10px 16px 14px;
+  gap: 4px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+@media (min-width: 768px) {
+  .auth-slide-panel {
+    width: 400px;
+    max-width: 400px;
+  }
+}
+
+@keyframes authSlideInRight {
+  from {
+    transform: translateY(-50%) translateX(100%);
+  }
+  to {
+    transform: translateY(-50%) translateX(0);
+  }
+}
+
+@keyframes authFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Lock page scroll while auth slide (or keypad) is open */
+html.slide-overlay-open,
+body.slide-overlay-open,
+html.numeric-keypad-open,
+body.numeric-keypad-open {
+  overflow: hidden !important;
+  overscroll-behavior: none;
+  touch-action: none;
+}
+
+body.slide-overlay-open,
+body.numeric-keypad-open {
+  position: fixed;
+  left: 0;
+  right: 0;
+  width: 100%;
+}
+
+.auth-mode-btn {
+  padding: 6px 12px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  background: #f3f4f6;
+  color: #374151;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 0.875rem;
+  flex: 1;
+}
+
+.auth-mode-btn.active {
+  border: 2px solid #0f766e;
+  background: #0f766e;
+  color: white;
+}
+
+.auth-primary-btn {
+  width: 100%;
+  padding: 8px 16px;
+  background-color: #0f766e;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.875rem;
+  cursor: pointer;
+}
+
+.auth-primary-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.auth-text-link {
+  margin-top: 4px;
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: 0.78rem;
+  color: #0f766e;
+  cursor: pointer;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}

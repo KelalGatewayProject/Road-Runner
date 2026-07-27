@@ -1,0 +1,5 @@
+# Road Runner Supabase project (not KelalGatewayProject)
+project_id = "iumdgtwwhkcqxfqhjywp"
+
+[functions.send-phone-otp]
+verify_jwt = false

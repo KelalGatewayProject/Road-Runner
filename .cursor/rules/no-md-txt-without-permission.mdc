@@ -1,0 +1,11 @@
+---
+description: Do not create MD/TXT without permission (OPS journal exception)
+alwaysApply: true
+---
+
+# No MD or TXT files without permission
+
+- **Before creating any `.md` or `.txt` file**, ask the user for permission. Do not create documentation, README, guides, or text files unless the user explicitly requests them.
+- **Exception:** `docs/OPS_JOURNAL.md` may be **created or updated** when required by `.cursor/rules/document-operational-steps.mdc` (operational / production step log). Do not use this exception for unrelated docs.
+- Prefer answering in the chat. Do not create an MD or text file "for reference" or "for later" without asking first.
+- If the user says they do not read MD/text files, do not create them; give the answer or instructions in the chat instead.

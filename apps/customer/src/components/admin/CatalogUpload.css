@@ -1,0 +1,222 @@
+.rr-upload-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 140;
+  background: rgba(4, 25, 43, 0.45);
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.rr-upload-panel {
+  width: min(100vw, 480px);
+  max-height: 90dvh;
+  overflow: auto;
+  background: #fff;
+  border-radius: 18px 18px 0 0;
+  padding: 18px 18px 28px;
+}
+
+.rr-upload-panel header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.rr-upload-panel header h2 {
+  margin: 0;
+  font-size: 1.15rem;
+  color: #07112a;
+}
+
+.rr-upload-panel header button {
+  width: 36px;
+  height: 36px;
+  border: 0;
+  border-radius: 50%;
+  background: #e8f4f4;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.rr-upload-hint {
+  margin: 0 0 12px;
+  font-size: 12px;
+  color: #5b6b6b;
+}
+
+.rr-upload-error {
+  margin: 0 0 12px;
+  padding: 10px;
+  border-radius: 10px;
+  background: #fee2e2;
+  color: #991b1b;
+  font-size: 13px;
+}
+
+.rr-upload-panel form {
+  display: grid;
+  gap: 10px;
+}
+
+.rr-upload-panel label {
+  display: grid;
+  gap: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #334;
+}
+
+.rr-upload-panel input,
+.rr-upload-panel select,
+.rr-upload-panel textarea {
+  padding: 10px 12px;
+  border: 1px solid #c5d9d9;
+  border-radius: 10px;
+  font: inherit;
+  font-weight: 400;
+}
+
+.rr-upload-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.rr-upload-panel form > button {
+  margin-top: 6px;
+  padding: 12px;
+  border: 0;
+  border-radius: 12px;
+  background: #10a3a6;
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.rr-upload-panel form > button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.rr-upload-banner {
+  display: grid;
+  gap: 8px;
+  padding: 12px;
+  border: 1px solid #c5d9d9;
+  border-radius: 12px;
+  background: #f7fbfb;
+}
+
+.rr-upload-banner strong {
+  font-size: 12px;
+  color: #07112a;
+}
+
+.rr-upload-banner-size {
+  margin: 0;
+  font-size: 11px;
+  line-height: 1.4;
+  color: #5b6b6b;
+  font-weight: 400;
+}
+
+.rr-upload-banner-preview,
+.rr-upload-banner-placeholder {
+  width: 100%;
+  aspect-ratio: 1200 / 640;
+  border-radius: 10px;
+  object-fit: cover;
+  background: #e8eef2;
+}
+
+.rr-upload-banner-placeholder {
+  display: grid;
+  place-items: center;
+  padding: 12px;
+  text-align: center;
+  font-size: 12px;
+  color: #887;
+  border: 1px dashed #b7c9c9;
+}
+
+.rr-upload-banner-pick {
+  position: relative;
+  display: grid;
+  place-items: center;
+  padding: 11px 12px;
+  border-radius: 10px;
+  background: #07112a;
+  color: #fff;
+  font-weight: 700;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.rr-upload-banner-pick input {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.rr-upload-location {
+  display: grid;
+  gap: 8px;
+  padding: 12px;
+  border: 1px solid #c5d9d9;
+  border-radius: 12px;
+  background: #f7fbfb;
+}
+
+.rr-upload-location strong {
+  font-size: 12px;
+  color: #07112a;
+}
+
+.rr-upload-location p {
+  margin: 0;
+  font-size: 13px;
+  color: #334;
+  line-height: 1.35;
+}
+
+.rr-upload-location small {
+  display: block;
+  margin-top: 4px;
+  color: #5b6b6b;
+  font-size: 11px;
+}
+
+.rr-upload-location-empty {
+  color: #887 !important;
+}
+
+.rr-upload-map-btn {
+  padding: 11px 12px;
+  border: 0;
+  border-radius: 10px;
+  background: #07112a;
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.delivery-map-coords {
+  margin: 0 0 8px;
+  text-align: center;
+  font-size: 12px;
+  color: #5b6b6b;
+}
+
+@media (min-width: 780px) {
+  .rr-upload-overlay {
+    align-items: center;
+    padding: 24px;
+  }
+
+  .rr-upload-panel {
+    border-radius: 18px;
+  }
+}

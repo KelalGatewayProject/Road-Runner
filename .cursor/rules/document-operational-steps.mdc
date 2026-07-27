@@ -1,0 +1,17 @@
+---
+description: Document verified successful operational outcomes (not failed attempts)
+alwaysApply: true
+---
+
+# Operational journal: successes only (Road Runner)
+
+When work touches **production**, **backend/DB**, **deploy/build scripts**, **infrastructure**, **payment gateways**, **maps/credentials**, or **preview tunnels**:
+
+1. **Update `docs/OPS_JOURNAL.md` only after something is verified working** — e.g. build succeeded, test delivery fee path works, maps load with the env key, smoke test passed.
+2. **Do not** append journal entries for intermediate failures or rejected approaches. Those belong in chat or tickets.
+3. Each entry should read like a **known-good recipe**: what the working setup is, **what** changed (files, scripts, secret *names* — never values), and **how we proved it**. Optional rollback in one line.
+4. If the user explicitly says **not** to write to the repo, summarize in chat only.
+
+**Project boundary:** Road Runner is a **standalone** product. Copy systems *into* this repo when reusing patterns from elsewhere; strip foreign product names from copied code. Temporary preview hosting elsewhere does not make that host the source of truth.
+
+Exception to “no new MD” for `docs/OPS_JOURNAL.md` stays in `no-md-txt-without-permission.mdc`.

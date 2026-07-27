@@ -1,0 +1,255 @@
+.rr-bank {
+  margin-bottom: 20px;
+}
+
+.rr-bank-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.rr-bank-head > div:first-child {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.rr-bank-emoji {
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.rr-bank-head h3 {
+  margin: 0;
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #1e40af;
+}
+
+.rr-bank-head p {
+  margin: 4px 0 0;
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+.rr-bank-fee-note {
+  margin: 0 0 12px;
+  font-size: 12px;
+  color: #5b6b6b;
+  line-height: 1.4;
+}
+
+.rr-bank-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.55rem;
+  margin-bottom: 16px;
+}
+
+.rr-bank-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.35rem;
+  min-width: 0;
+  padding: 0.55rem 0.45rem;
+  border: 2px solid #e0e0e0;
+  border-radius: 12px;
+  background: #fff;
+  cursor: pointer;
+  transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
+  text-align: center;
+}
+
+.rr-bank-card:hover {
+  border-color: #07112a;
+  box-shadow: 0 4px 12px rgba(7, 17, 42, 0.2);
+  transform: translateY(-2px);
+}
+
+.rr-bank-card img {
+  width: 58px;
+  height: 58px;
+  object-fit: contain;
+}
+
+.rr-bank-card-icon {
+  width: 58px;
+  height: 58px;
+  display: grid;
+  place-items: center;
+  font-size: 2rem;
+}
+
+.rr-bank-card strong {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.rr-bank-card b {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #07112a;
+}
+
+.rr-bank-card small {
+  font-size: 0.68rem;
+  color: #6b7280;
+}
+
+.rr-bank-card--cashbox {
+  border-color: #10a3a6;
+}
+
+.rr-bank-card--wht {
+  border-color: #f59e0b;
+}
+
+.rr-bank-ledger h4 {
+  margin: 0 0 8px;
+  font-size: 0.95rem;
+  color: #07112a;
+}
+
+.rr-bank-ledger ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 8px;
+}
+
+.rr-bank-ledger li {
+  background: #fff;
+  border: 1px solid #d7e8e8;
+  border-radius: 10px;
+  padding: 10px 12px;
+}
+
+.rr-bank-ledger strong {
+  display: block;
+  color: #07112a;
+}
+
+.rr-bank-ledger span,
+.rr-bank-ledger small {
+  display: block;
+  color: #5b6b6b;
+  font-size: 12px;
+  margin-top: 2px;
+}
+
+.rr-bank-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 160;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.rr-bank-modal {
+  width: min(100vw, 560px);
+  max-height: 85dvh;
+  overflow: auto;
+  background: #fff;
+  border-radius: 16px 16px 0 0;
+  padding: 16px 16px 24px;
+}
+
+.rr-bank-modal header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.rr-bank-modal header h4 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #1e40af;
+}
+
+.rr-bank-modal header button {
+  width: 36px;
+  height: 36px;
+  border: 0;
+  border-radius: 50%;
+  background: #f3f4f6;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.rr-bank-edit {
+  display: grid;
+  gap: 8px;
+  margin: 12px 0;
+  padding: 12px;
+  background: #f8fafc;
+  border-radius: 10px;
+}
+
+.rr-bank-edit label {
+  display: grid;
+  gap: 4px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.rr-bank-edit input {
+  padding: 10px 12px;
+  border: 1px solid #c5d9d9;
+  border-radius: 10px;
+  font: inherit;
+}
+
+.rr-bank-edit button {
+  padding: 10px 12px;
+  border: 0;
+  border-radius: 10px;
+  background: #07112a;
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.rr-bank-modal-list {
+  list-style: none;
+  margin: 12px 0 0;
+  padding: 0;
+  display: grid;
+  gap: 8px;
+}
+
+.rr-bank-modal-list li {
+  padding: 10px;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+}
+
+.rr-bank-modal-list strong,
+.rr-bank-modal-list span,
+.rr-bank-modal-list small {
+  display: block;
+}
+
+.rr-bank-modal-list small {
+  color: #6b7280;
+  font-size: 11px;
+  margin-top: 2px;
+}
+
+@media (min-width: 780px) {
+  .rr-bank-modal-overlay {
+    align-items: center;
+    padding: 24px;
+  }
+
+  .rr-bank-modal {
+    border-radius: 16px;
+  }
+}

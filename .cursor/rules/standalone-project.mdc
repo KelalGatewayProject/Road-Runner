@@ -1,0 +1,21 @@
+---
+description: Road Runner is a standalone product; keep source of truth in this repo
+alwaysApply: true
+---
+
+# Road Runner project boundary
+
+Road Runner is a **new standalone project**. Temporary preview hosting on another platform is only for localhost/tunnel access while developing.
+
+## Do
+
+- Keep product code, maps, cart, fees, assets, and env **names** under this repo (`C:\Users\Michel Tadesse\Road Runner`).
+- New agents: read `AGENTS.md` first, then `docs/OPS_JOURNAL.md`.
+- When reusing a system from elsewhere, **copy** it here and adapt names/data for Road Runner.
+- Strip foreign product / company names from copied files and comments.
+
+## Do not
+
+- Treat another app repo as the long-term home for Road Runner features.
+- Leave Road Runner-only logic only in a temporary host repo.
+- Commit secret **values** (API keys, tokens). Use `apps/customer/.env.local` locally; document secret **names** in `docs/OPS_JOURNAL.md` when verified.
