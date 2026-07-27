@@ -8,6 +8,16 @@ Newest entries **at the top**.
 
 ---
 
+## 2026-07-27 — GitHub repo + AGENTS.md (standalone workspace)
+
+**Working outcome:** Road Runner lives at `C:\Users\Michel Tadesse\Road Runner` with its own git remote. First push to https://github.com/KelalGatewayProject/Road-Runner.git (`main`, commit `13e7113`). Root `AGENTS.md` briefs new Cursor agents; `.gitignore` excludes `node_modules` / `*.local`; publish script path updated off `Documents\`.
+
+**How we verified:** `git push -u origin main` succeeded; working tree clean; `.env.local` not staged.
+
+**Rollback:** delete remote repo or `git remote remove origin` locally (local files remain).
+
+---
+
 ## 2026-07-27 — Admin roles, The Bank, pharmacy banner storage, map pin screen, Super Admin bypass
 
 **Working outcome:** Full admin layer operational on the RoadRunner Supabase project.
